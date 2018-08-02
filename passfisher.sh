@@ -12,7 +12,7 @@ echo """
 88     88  8 8ee88 8ee88 88   88 8ee88 88  8 88ee 88   8 
 
 888888888888888888888888888888888888888888888888888888888888
-   Uso: ./passfisher {MIN} {MAX} {LENGHT} | + Informações
+  Uso: ./passfisher.sh {MIN} {MAX} {LENGHT} | + Informações
 888888888888888888888888888888888888888888888888888888888888
 """
 
@@ -24,7 +24,7 @@ echo ""
 if [$1 = ""]; then
     echo "[!] Uso: ./passfisher.sh {MIN} {MAX} {LENGHT}"
     echo "[!] Examplo: ./passfisher.sh 10 10 500"
-    echo "[!] Info: ./passfisher {Tamanho minimo} {Tamanho Maximo} {Numero de Linhas}"
+    echo "[!] Info: ./passfisher.sh {Tamanho minimo} {Tamanho Maximo} {Numero de Linhas}"
     echo ""    
 else
     python main.py
