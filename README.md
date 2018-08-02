@@ -1,5 +1,6 @@
 # passfisher
 Create directed passwordlist with passfisher script
+Dependencies: Python, Perl, Bash
 
 ```
 888888888888888888888888888888888888888888888888888888888888
