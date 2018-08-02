@@ -15,12 +15,12 @@ Dependencies: Python, Perl, Bash
 88     88  8 8ee88 8ee88 88   88 8ee88 88  8 88ee 88   8 
 
 888888888888888888888888888888888888888888888888888888888888
-   Uso: ./passfisher {MIN} {MAX} {LENGHT} | + Informações
+  Uso: ./passfisher.sh {MIN} {MAX} {LENGHT} | + Informações
 888888888888888888888888888888888888888888888888888888888888
 
 
 [!] Uso: ./passfisher.sh {MIN} {MAX} {LENGHT}
 [!] Examplo: ./passfisher.sh 10 10 500
-[!] Info: ./passfisher {Tamanho minimo} {Tamanho Maximo} {Numero de Linhas}
+[!] Info: ./passfisher.sh {Tamanho minimo} {Tamanho Maximo} {Numero de Linhas}
 
 ```
