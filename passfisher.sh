@@ -30,4 +30,5 @@ else
     python main.py
     victiminfo=$(<victim.lst)
     perl main.pl -ml $1 -l $2 -mm $3 -m $victiminfo --random
+    ls -lsha wordlist.txt
 fi
