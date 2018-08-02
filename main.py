@@ -45,7 +45,7 @@ signals = ('!'+';'
            '.')
 
 
-file = open ('victim.info', 'w')
+file = open ('victim.lst', 'w')
 file.write(fristname+';')
 file.write(lastname+';')
 file.write(fullname+';')

@@ -1,10 +1,33 @@
 #!/bin/bash
 echo """
-################################
-## Created by RamalhoSec Team ##
-## Version: 0.1a              ##
-################################"""
+888888888888888888888888888888888888888888888888888888888888
+ Dev: RamalhoSec Team | ver 0.1a | Creditos: Deffy0h | 2018
+888888888888888888888888888888888888888888888888888888888888
+
+8eeee8                                                   
+8    8 eeeee eeeee eeeee eeee e  eeeee e   e eeee eeeee  
+8eeee8 8   8 R   a m   a l    h  o   S e   c 8    8   8  
+88     8eee8 8eeee 8eeee 8eee 8e 8eeee 8eee8 8eee 8eee8e 
+88     88  8    88    88 88   88    88 88  8 88   88   8 
+88     88  8 8ee88 8ee88 88   88 8ee88 88  8 88ee 88   8 
+
+888888888888888888888888888888888888888888888888888888888888
+   Uso: ./passfisher {MIN} {MAX} {LENGHT} | + Informações
+888888888888888888888888888888888888888888888888888888888888
+"""
+
 echo ""
-command -v crunch && echo "[+] Crunch ok" || apt-get -y install crunch
-command -v python && echo "[+] Python ok" || apt-get -y install python
+test /usr/bin/python  && echo "[+] Python ok" || apt-get -y install python
+test /usr/bin/perl && echo "[+] Perl ok" || apt-get -y install perl
 echo ""
+
+if [$1 = ""]; then
+    echo "[!] Uso: ./passfisher.sh {MIN} {MAX} {LENGHT}"
+    echo "[!] Examplo: ./passfisher.sh 10 10 500"
+    echo "[!] Info: ./passfisher {Tamanho minimo} {Tamanho Maximo} {Numero de Linhas}"
+    echo ""    
+else
+    python main.py
+    victiminfo=$(<victim.lst)
+    perl main.pl -ml $1 -l $2 -mm $3 -m $victiminfo --random
+fi
