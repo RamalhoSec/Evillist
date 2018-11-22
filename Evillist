@@ -11,7 +11,6 @@
 [ "$UID" != "0" ] && { echo "Please runt this tool at root!"; exit 1 ;}
 test /usr/bin/crunch && echo ""  || "[!]Please install crunch!"
 
-
 #::color
 red='\033[31;1m'
 green='\033[32;1m'
@@ -28,6 +27,7 @@ max=$2
 victiminfo=`echo ${3} | sed 's/,//g'`
 run=".run.sh"
 file="wordlist.lst"
+
 
 #::logo
 F_LOGO(){
@@ -52,11 +52,21 @@ F_LOGO(){
 LOGO
 }
 
+
+
+#::start de tool
+if [ $# -lt 1 ]; then
+   clear
+   F_LOGO
+   exit 1
+fi
+clear
 F_LOGO
 rm $run 1&> /dev/null 2&> /dev/null
 
+
 #::crate the wordlist.txt
-printf "\nHey wait a moment -> \n"
+printf $red"\nHey wait a moment -> \n"
 echo "crunch $1 $2 $victiminfo > $file" > $run && chmod +x $run
 ./$run 1&> /dev/null 2&> /dev/null
-printf "Yeahhh excelent! your passlist is here: \n" && ls -lsha $file && printf "\n" && rm $run
+printf $green"Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $file && printf "\n" && rm $run
