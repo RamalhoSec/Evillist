@@ -5,7 +5,7 @@ test /usr/bin/perl && echo "[+] Perl ok" || apt-get -y install perl
 
 
 if [$1 = ""]; then
-    printf("if not")
+    printf 'if not'
 else
-    printf("if yes")
+    printf 'if yes'
 fi
