@@ -1,4 +1,4 @@
-# encoding utf-8
+# Evillist 
 # Created by: Acr4n1us
 # Contact & Changelog: https://github.com/RamalhoSec
 # Bitcoin: 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC
