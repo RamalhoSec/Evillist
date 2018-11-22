@@ -9,7 +9,7 @@
 
 #::required root & check requeriments
 [ "$UID" != "0" ] && { echo "Please runt this tool at root!"; exit 1 ;}
-test /usr/bin/crunch && echo ""  || "[!]Please install crunch!"
+test /usr/bin/crunch && echo ""  || apt install crunch
 
 #::color
 red='\033[31;1m'
