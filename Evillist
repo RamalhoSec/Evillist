@@ -6,9 +6,8 @@
 
 
 
-#::required root 
+#::required root & git update
 [ "$UID" = "1" ] && { echo "Please run the script at root"; exit 1 ;}
-
 
 #::color
 red='\033[31;1m'
@@ -29,14 +28,14 @@ F_LOGO(){
          | |          This is a hold up! Put all your money in the
        @#####@        disk drive slot, and no one gets hurt!
      (###   ###)-.
-   .(###     ###) \   +----------------------------------------------------------+
-  /  (###   ###)   )   ${name}: Create your direct wordlist with target info!   
- (=-  .@#####@|_--"    Created by: Acr4n1us > I do not answer for your actions. 
- /\    \_|l|_/ (\  	   Contact: https://github.com/RamalhoSec/                  
-(=-\     |l|    /      Bitcoin: 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC              
- \  \.___|l|___/           How use this tool:                                     
- /\      |_|   /                           ./${name}
-(=-\._________/\
+   .(###     ###) \   +--------------------------------------------------------------+
+  /  (###   ###)   )  	 ${name}: Create your direct wordlist with target info!   
+ (=-  .@#####@|_--"	 Created by: Acr4n1us > I do not answer for your actions. 
+ /\    \_|l|_/ (\   	 Contact: https://github.com/RamalhoSec/                 
+(=-\     |l|    /     	 Bitcoin: 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC              
+ \  \.___|l|___/             How use this tool:                                     
+ /\      |_|   /      	      	            ./${name}
+(=-\._________/
  \             /
    \._________/
      #  ----  #
