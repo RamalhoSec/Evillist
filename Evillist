@@ -15,7 +15,9 @@ test /usr/bin/crunch && echo ""  || "[!]Please install crunch!"
 red='\033[31;1m'
 green='\033[32;1m'
 cyan='\033[36;1m'
+yellow='\033[33;1m'
 end='\033[m'
+logoc=`printf $yellow""`
 
 #::variables
 name="Evillist"
@@ -31,7 +33,8 @@ file="wordlist.lst"
 
 #::logo
 F_LOGO(){
-  cat <<LOGO
+  cat <<LOGO 
+		${logoc}
           ^
          | |          This is a hold up! Put all your money in the
        @#####@        disk drive slot, and no one gets hurt!
