@@ -81,11 +81,11 @@ echo ${3} | sed 's/,/\n/g' > $vicinfodb
 infos=`cat $vicinfodb | wc -l`
 
 for i in $(seq 0 $infos); do infolist[${i}]=`cat $vicinfodb | head -$i | tail -1`; done
-echo "------------------------ If you want cancel just CTRL+C: "
+echo "====================>> If you want cancel just CTRL+C: "
 
 for scan in "${infolist[@]}"; do 
 	cat ${file} | grep $scan >> $passwordlist
 done
 
 #::end the tool and show created file
-printf $green"Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $passwordlist && printf $end"\n" 
+printf $green"====================> Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $passwordlist && printf $end"\n" 
