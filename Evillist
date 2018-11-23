@@ -8,14 +8,14 @@
 
 
 #::required root 
-[ "$UID" != "0" ] && { echo "Please runt this tool at root!"; exit 1 ;}
+[ "$UID" != "0" ] && { echo $red"Please runt this tool at root!"; exit 1 ;}
 
 
 #::color
 red='\033[31;1m'
 green='\033[32;1m'
 cyan='\033[36;1m'
-yellow='\033[33;1m'
+yellow='Default \e[33m'
 end='\033[m'
 logoc=`printf $yellow""`
 
@@ -88,4 +88,4 @@ for scan in "${infolist[@]}"; do
 done
 
 #::end the tool and show created file
-printf $green"====================> Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $passwordlist && printf $end"\n" 
+printf $green"====================>> Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $passwordlist && printf $end"\n" 
