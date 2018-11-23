@@ -5,18 +5,12 @@
 # Bitcoin: 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC
 # Version 0.1
 
-
-
-#::required root 
-[ "$UID" != "0" ] && { echo $red"Please runt this tool at root!"; exit 1 ;}
-
-
 #::color
-red='\033[31;1m'
-green='\033[32;1m'
-cyan='\033[36;1m'
-yellow='Default \e[33m'
-end='\033[m'
+red='\e[91m'
+green='\e[92m'
+cyan='\e[96m'
+yellow='\e[33m'
+end='\e[50m'
 logoc=`printf $yellow""`
 
 #::variables
@@ -31,9 +25,13 @@ run=".run.sh"
 file=".db.lst"
 passwordlist="wordlist.lst"
 
+#::required root 
+[ "$UID" != "0" ] && { echo $red"Please runt this tool at root!"; exit 1 ;}
+
 #::remov other archives and add req:
-rm $victiminfo $vicinfodb $run $file $passwordlist
+rm -rf $victiminfo $vicinfodb $run $file $passwordlist
 test $(ls /usr/bin/${generator}) && echo "${name}{version}\n" || apt install ${generator}
+
 
 #::logo
 F_LOGO(){
