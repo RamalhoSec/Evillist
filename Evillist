@@ -72,9 +72,11 @@ rm $run 1&> /dev/null 2&> /dev/null
 
 #::crate the wordlist.txt
 printf $green"\n====================>> Hey wait a moment! \n"
+printf $red"====================>> If you want cancel just CTRL+C:\n"
 echo "crunch $1 $2 $victiminfo > ${file}" > $run && chmod +x $run
 ./$run 1&> /dev/null 2&> /dev/null
-printf $red"====================>> If you want cancel just CTRL+C:\n"
+
+
 echo ${3} | sed 's/,/\n/g' > $vicinfodb
 infos=`cat $vicinfodb | wc -l`
 
@@ -85,4 +87,5 @@ for scan in "${infolist[@]}"; do
 done
 
 #::end the tool and show created file
-printf $green"====================>> Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $passwordlist && printf ""$end"\n" 
+printf $green"\e[5m====================>> Yeahhh excelent! your passlist is here:\e[0m $cyan\n" 
+ls -lsha $passwordlist && printf ""$end"\n" 
