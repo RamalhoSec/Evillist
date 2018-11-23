@@ -82,7 +82,7 @@ infos=`cat $vicinfodb | wc -l`
 
 for i in $(seq 0 $infos); do infolist[${i}]=`cat $vicinfodb | head -$i | tail -1`; done
 
-for scan in "${infolist[@]}"; do 
+for scan in "${infolist[@]}"; do
 	cat ${file} | grep $scan >> $passwordlist
 done
 
