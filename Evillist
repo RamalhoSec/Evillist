@@ -30,7 +30,7 @@ passwordlist="wordlist.lst"
 
 #::remov other archives and add req:
 rm -rf $victiminfo $vicinfodb $run $file $passwordlist
-test $(ls /usr/bin/${generator}) && echo "${name}{version}\n" || apt install ${generator}
+test $(which ${generator}) && echo "${name}{version}\n" || apt install ${generator}
 
 
 #::logo
