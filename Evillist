@@ -8,7 +8,7 @@
 
 
 #::required root & check requeriments
-[ "$UID" != "0" ] && { echo "Please runt this tool at root!"; exit 1 ;}
+#[ "$UID" != "0" ] && { echo "Please runt this tool at root!"; exit 1 ;}
 
 #::color
 red='\033[31;1m'
@@ -21,13 +21,17 @@ logoc=`printf $yellow""`
 #::variables
 name="Evillist"
 version="0.1"
-dir_cfg="${HOME}/Evillist"
 generator="crunch"
 min=$1
 max=$2
 victiminfo=`echo ${3} | sed 's/,//g'`
+vicinfodb=".victiminfo.db"
 run=".run.sh"
-file="wordlist.lst"
+file=".db.lst"
+passwordlist="wordlist.lst"
+
+#remov other archives:
+rm $victiminfo $vicinfodb $run $file $passwordlist
 
 
 #::logo
@@ -71,4 +75,15 @@ rm $run 1&> /dev/null 2&> /dev/null
 printf $red"\nHey wait a moment -> \n"
 echo "crunch $1 $2 $victiminfo > $file" > $run && chmod +x $run
 ./$run 1&> /dev/null 2&> /dev/null
-printf $green"Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $file && printf "\n" && rm $run
+
+echo ${3} | sed 's/,/\n/g' > $vicinfodb
+infos=`cat $vicinfodb | wc -l`
+
+for i in $(seq 0 $infos); do infolist[$i]=`cat $vicinfodb | head -$i | tail -1`; done
+echo "------------------------ If you want cancel just CTRL+C: "
+
+for scan in "${infolist[@]}"; do 
+	cat $file | grep $scan >> $passwordlist
+done
+
+printf $green"Yeahhh excelent! your passlist is here: \n"$cyan && ls -lsha $passwordlist && printf $end"\n" 
