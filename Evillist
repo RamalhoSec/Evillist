@@ -30,31 +30,17 @@ passwordlist="wordlist.lst"
 
 #::remov other archives and add req:
 rm -rf $victiminfo $vicinfodb $run $file $passwordlist
-test $(which ${generator}) && echo "${name}{version}\n" || apt install ${generator}
+test $(ls /usr/bin/${generator}) && echo "${name}{version}\n" || apt install ${generator}
 
 
 #::logo
 F_LOGO(){
-  cat <<LOGO 
-		${logoc}
-          ^
-         | |          This is a hold up! Put all your money in the
-       @#####@        disk drive slot, and no one gets hurt!
-     (###   ###)-.
-   .(###     ###) \   +--------------------------------------------------------------+
-  /  (###   ###)   )  	[*]${name}: Create your direct wordlist with target info!
- (=-  .@#####@|_--"	[*]Created by: Acr4n1us > I do not answer for your actions.
- /\    \_|l|_/ (\   	[*]Contact: https://github.com/RamalhoSec/
-(=-\     |l|    /     	[*]Bitcoin: 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC
- \  \.___|l|___/
- /\      |_|   /      	[!]How use this tool:
-(=-\._________/		[#]./${name} <min chars> <max chars> <info1,info2,info3,inf..>
- \             /        [!]LOOK necessary use the (,)
-   \._________/         [!]One file ${passwordlist} will be created
-     #  ----  #
-     #   __   #
-     \########/
-LOGO
+	printf "\n
+
+
+
+
+\n"
 }
 
 
