@@ -34,7 +34,7 @@ test $(ls /usr/bin/${generator}) && echo "${name}{version}\n" || apt install ${g
 
 
 #::logo
-F_LOGO(){
+F_LOGO(){ cat <<EOF
 	printf "\n
 
           ^
@@ -56,6 +56,7 @@ F_LOGO(){
      \########/
 
 \n"
+EOF
 }
 
 
