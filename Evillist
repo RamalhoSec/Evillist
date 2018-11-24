@@ -37,8 +37,8 @@ test $(ls /usr/bin/${generator}) && echo "${name}{version}\n" || apt install ${g
 F_LOGO(){ 
 	printf "\n${yellow}
 
-▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒	This is a hold up! Put all your money in the
-▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄░░▒▒▒▒▒	drive slot, and no one gets hurt!
+▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒	${red}${name}${green}${version}${red} is the new tool for help crack passwords${yellow}
+▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄░░▒▒▒▒▒	
 ▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██▌░░▒▒▒▒   [*]Evillist: Create your direct wordlist with target info!
 ▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░▄▄███▀░░░░▒▒▒   [*]Created by: Acr4n1us > I do not answer for your actions.
 ▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░█████░▄█░░░░▒▒   [*]Contact: https://github.com/RamalhoSec/
