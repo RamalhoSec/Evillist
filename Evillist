@@ -11,7 +11,7 @@ green='\e[92m'
 cyan='\e[96m'
 yellow='\e[33m'
 end='\e[50m'
-logoc=`printf $yellow""`
+
 
 #::variables
 name="Evillist"
