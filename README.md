@@ -1,8 +1,3 @@
-# Evillist 
-# Created by: Acr4n1us
-# Contact & Changelog: https://github.com/RamalhoSec
-# Bitcoin: 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC
-# Version: 0.1
 ```
 
 ▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒	Evillist v0.1: Is the new tool for help crack passwords
