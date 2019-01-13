@@ -20,48 +20,48 @@ v_input=""
 
 #::Defining Global Functions
 f_logo() {
-	printf "
-Evillist v1.0 (https://gitlab.com/raioramalho/evillist)
+    printf "
+    Evillist v1.0 (https://gitlab.com/raioramalho/evillist)
 
-Create your password list with victim information.
-This tool has been translated from Portuguese[br] into English[us].
-I do not take responsibility for your actions.
+    Create your password list with victim information.
+    This tool has been translated from Portuguese[br] into English[us].
+    I do not take responsibility for your actions.
 
-Usage: evillist -l <max password length> -i <victim information,info1,info2>
-Usage example: evillist -l 8 -i red,admin,pixel,123,root\n\n"
+    Usage: evillist -l <max password length> -i <victim information,info1,info2>
+    Usage example: evillist -l 8 -i red,admin,pixel,123,root\n\n"
 }
 
 
 
 f_help() {
-	printf "
-Engine Options:
-	-l <>: Specify the length of the password.
-	-i <>: Set the victim info to make a directed passwordlist.
-Extra Options:
-	-I <.lst,.txt>: Set the file with victim informations.
-Global Options:
-	--help <>: Show this help panel.
-	-h <>: Show this help panel too.\n\n"
+    printf "
+    Engine Options:
+    -l <>: Specify the length of the password.
+    -i <>: Set the victim info to make a directed passwordlist.
+    Extra Options:
+    -I <.lst,.txt>: Set the file with victim informations.
+    Global Options:
+    --help <>: Show this help panel.
+    -h <>: Show this help panel too.\n\n"
 }
 
 
 
 
 f_start() {
-	if [ -z $v_len ]; then
-		printf "Please set the lenght of password.\n"
-		exit 1
-	fi
+    if [ -z $v_len ]; then
+        printf "Please set the lenght of password.\n"
+        exit 1
+    fi
 
-	case $v_key in
-		-i)tmp_info="$(echo $v_info | sed 's/,//g')"
-		printf "$(crunch ${v_len} ${v_len} ${tmp_info} > ${v_output})\n";;
-		-I)tmp_info="$(cat $v_info | tr '\n' , | sed 's/,//g')";
-		printf "$(crunch ${v_len} ${v_len} ${tmp_info} > ${v_output})\n";;
-		*)printf "Please specify one victim input mode.\n"
-	esac
-	
+    case $v_key in
+        -i)tmp_info="$(echo $v_info | sed 's/,//g')"
+            printf "$(crunch ${v_len} ${v_len} ${tmp_info} > ${v_output})\n";;
+        -I)tmp_info="$(cat $v_info | tr '\n' , | sed 's/,//g')";
+            printf "$(crunch ${v_len} ${v_len} ${tmp_info} > ${v_output})\n";;
+        *)printf "Please specify one victim input mode.\n"
+    esac
+
 }
 #################################################
 
@@ -69,9 +69,9 @@ f_start() {
 
 #::Arguments Menu
 case $1 in
-	--help)f_logo; f_help;;
-	-h)f_logo; f_help;;
-	-l)f_logo; v_len=$2; v_key=$3; v_info=$4; f_start;;
-	*)f_logo; f_help;;
+    --help)f_logo; f_help;;
+    -h)f_logo; f_help;;
+    -l)f_logo; v_len=$2; v_key=$3; v_info=$4; f_start;;
+    *)f_logo; f_help;;
 esac
 ##################################################
